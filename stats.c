@@ -1,15 +1,9 @@
 #include <stdio.h>
 #include "stats.h"
 #define SIZE (40)
-float avg1(unsigned char *p,int size);
-float med(unsigned char *p,int size);
-int min(unsigned char *p, int size);
-int max(unsigned char *p, int size);
-void printarr(unsigned char *p,int size);
-void srtarr(unsigned char *p,int size);
-void printstats();
-float a,b;
-int c,d;
+
+int a,b,c,d;
+
 void main() {
 
 
@@ -34,9 +28,9 @@ void main() {
 
 void printstats(){
 
-    	printf("Average =%f",a);
+    	printf("Average =%d",a);
 
-    	printf("\nMedian = %f", b);
+    	printf("\nMedian = %d", b);
 
     	printf("\nMaximum = %d", c);
 
@@ -44,9 +38,9 @@ void printstats(){
 
 }
 
-float avg1(unsigned char *p,int size){
+int avg1(unsigned char *p,int size){
 	int sum = 0;
-	float average;
+	int average;
 
 	for(int i =0;i<size;i++){
 		sum +=*p;
@@ -56,10 +50,10 @@ float avg1(unsigned char *p,int size){
 	return average;
 }
 
-float med(unsigned char *p,int size){
+int med(unsigned char *p,int size){
 	int ipos;
 	int fpos;
-	float median;
+	int median;
 	int i;
 	if(size%2==0){
 		int s=0;
@@ -147,8 +141,10 @@ void srtarr(unsigned char *s,int size){
 }
 void printarr(unsigned char *p,int size){
 	printf("\n");
+  printf("Sorted Array\n");
+  printf("\t");
 	for (int i =0;i<size;i++){
-		printf("%d\n",*p);
+		printf("%d\t",*p);
 		p++;
 
 	}

@@ -2,7 +2,7 @@
 #define __STATS_H__
 
 
-float avg1(unsigned char *p,int size);
+int avg1(unsigned char *p,int size);
 /**
  * @brief computes average of dataset
  *
@@ -15,7 +15,7 @@ float avg1(unsigned char *p,int size);
  * @return average value of the n-element array
  */
 
- float med(unsigned char *p,int size);
+ int med(unsigned char *p,int size);
  /**
   * @brief computes median of dataset
   *
@@ -91,4 +91,4 @@ float avg1(unsigned char *p,int size);
        *
        * @return no return value
        */
-#endif 
+#endif
